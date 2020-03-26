@@ -1,158 +1,209 @@
 * {
-    box-sizing: border-box;
-  }
-  :root {
-    --main-color: darkorange;
-    font-family: Helvetica, Arial, sans-serif;
-  }
-  body {
-    margin: 0;
-    font-family: helvetica;
-  }
-  
-  /* HEADER STYLES */
-  
-  #navbar {
-    background-color: var(--main-color);
-    /*   height: 80px; */
-    z-index: 20;
-    position: fixed;
-    width: 100%;
-    /*   margin: 0 20px 0 0; */
-  }
-  header ul {
-    margin: 0;
-    text-align: right;
-    margin-right: 40px;
-  }
-  header li {
-    display: inline-block;
-    list-style: none;
-    /*   line-height: 80px; */
-    /*   background-color: blue; */
-    /*   padding: 0; */
-  }
-  header li a {
-    text-decoration: none;
-    display: relative;
-    font-size: 1.7em;
-    padding: 1em 1.5em;
-    font-weight: bold;
-    color: black;
-    line-height: 80px;
-    /*   background-color: red; */
-  }
-  header li:hover {
-    background-color: grey;
-  }
-  
-  /* WELCOME SECTION STYLES */
-  
-  #welcome-section {
-    position: relative;
-    padding-top: 80px;
-    height: 100vh;
-    width: 100%;
-    background-color:#222;
-  }
+  box-sizing: border-box;
+}
+:root {
+  --main-color: darkorange;
+  font-family: Helvetica, Arial, sans-serif;
+}
+body {
+  margin: 0;
+  font-family: helvetica;
+}
 
-  #welcome-section div {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-  }
-  #welcome-section h1 {
-    font-size: 7em;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 0;
-  }
-  #welcome-section p {
-    /* font-style: italic; */
-    font-size: 3em;
-    color: #fff;;
-  }
-  .syntax {
-    color: rgb(0, 102, 255);
-  }
-  /* PROJECT SECTION STYLES */
+/* HEADER STYLES */
+
+#navbar {
+  background-color: var(--main-color);
+  /*   height: 80px; */
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+  /*   margin: 0 20px 0 0; */
+}
+header ul {
+  margin: 0;
+  text-align: right;
+  margin-right: 40px;
+}
+header li {
+  display: inline-block;
+  list-style: none;
+  /*   line-height: 80px; */
+  /*   background-color: blue; */
+  /*   padding: 0; */
+}
+header li a {
+  text-decoration: none;
+  display: relative;
+  font-size: 1.7em;
+  padding: 1em 1.5em;
+  font-weight: bold;
+  color: black;
+  line-height: 70px;
+  /*   background-color: red; */
+}
+header li:hover {
+  background-color: grey;
+}
+
+/* WELCOME SECTION STYLES */
+
+#welcome-section {
+  position: relative;
+  padding-top: 80px;
+  height: 100vh;
+  width: 100%;
+  /* background-color:#222; */
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+}
+#welcome-section div {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+#welcome-section h1 {
+  font-size: 7em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0;
+}
+#welcome-section p {
+  /* font-style: italic; */
+  font-size: 3em;
+  color: #fff;;
+}
+.syntax {
+  color: rgb(0, 102, 255);
+}
+
+/* ABOUT SECTION STYLES */
+#about-section {
+  padding: 140px 20px;
+  background: grey;
+  height: 1000px;
+  display: none;
+}
+
+
+
+/* PROJECT SECTION STYLES */
+
+#projects {
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#283864;
+    background-size:16px 16px;
+
+/*   height: 1300px; */
+  padding: 140px 20px;
+}
+
+#projects-header {
+  border-bottom: solid white;
+/*   background: red; */
+/*   font-weight: bold; */
+  text-align: center;
+  padding: 0 0 10px 0;
+  margin: 0 auto 50px;
+  color: white;
+  font-size: 3em;
+  max-width: 730px;
+}
+.project-container {
+/*   background: white; */
+  column-gap: 40px;
+    
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 500px;
+  margin: 0 auto;
+  row-gap: 40px;
+  width: 1400px;
+    
+}
+.project-tile {
+  background: white;
+  cursor: pointer;
+/*   margin: 10px; */
+/*   position: relative; */
+  background-image: url(/images/screenshot-socrates-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.project-thumb {
+  height: 85%;
+}
+.project-banner {
+  background-color: var(--main-color);
+  height: 15%;
+  position: relative;
+/*   line-height: 100%; */
+/*   position: absolute; */
+/*   top: 50%; */
+/*   text-align: center; */
+/*   vertical align: center; */
+}
+.project-banner a {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: none;
+  position: absolute;
+/*   background: red; */
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* CONTACT SECTION STYLES */
+
+#contact {
+  background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+  height: 60vh;
+  position: relative;
+  font-size: 1rem;
+}
+#contacts-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transform: translateY(-50%);
+}
+#contacts-wrapper h1{
+  font-size: 4em;
+  color: #fff;
+}
+
+#contacts-wrapper ul{
+  text-decoration: none;
   
-  #projects {
-    background: navy;
-  
-  /*   height: 1300px; */
-    padding: 140px 20px;
-  }
-  
-  #projects-header {
-    border-bottom: solid white;
-  /*   background: red; */
-  /*   font-weight: bold; */
-    text-align: center;
-    padding: 0 0 10px 0;
-    margin: 0 auto 50px;
-    color: white;
-    font-size: 3em;
-    max-width: 730px;
-  }
-  .project-container {
-  /*   background: white; */
-    column-gap: 40px;
-      
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 500px;
-    margin: 0 auto;
-    row-gap: 40px;
-    width: 1400px;
-      
-  }
-  .project-tile {
-    background: white;
-    cursor: pointer;
-  /*   margin: 10px; */
-  /*   position: relative; */
-    background-image: url(/images/screenshot-socrates-500x500.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-  }
-  .project-thumb {
-    height: 85%;
-  }
-  .project-banner {
-    background-color: var(--main-color);
-    height: 15%;
-    position: relative;
-  /*   line-height: 100%; */
-  /*   position: absolute; */
-  /*   top: 50%; */
-  /*   text-align: center; */
-  /*   vertical align: center; */
-  }
-  .project-banner a {
-    color: #000;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-decoration: none;
-    position: absolute;
-  /*   background: red; */
-    text-decoration: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  
-  /* CONTACT SECTION STYLES */
-  #contact {
-    background: purple;
-    height: 80vh;
-  }
-  
-  @media (max-width: 800px) {
-  }
-  
+}
+
+#contacts-wrapper li {
+  display: inline-block;
+}
+@media (max-width: 800px) {
+}
