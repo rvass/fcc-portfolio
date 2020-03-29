@@ -182,7 +182,7 @@ header li:hover {
   background-size:16px 16px;
   height: 60vh;
   position: relative;
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
 #contacts-wrapper {
   position: absolute;
@@ -199,11 +199,32 @@ header li:hover {
 
 #contacts-wrapper ul{
   text-decoration: none;
-  
+  margin-top: 100px;
 }
 
 #contacts-wrapper li {
   display: inline-block;
+  font-size: 2em;
+  color: #fff;
+  /* margin: 0 10px; */
+  padding: 0 20px;
+  
 }
+#contacts-wrapper a {
+  text-decoration: none;
+  text-shadow: 2px 2px 1px #000;
+  color: #fff;
+}
+
+#contacts-wrapper a:visited {
+  color: #fff;
+}
+
+#contacts-wrapper a:hover {
+  color: orange;
+}
+
+
+
 @media (max-width: 800px) {
 }
