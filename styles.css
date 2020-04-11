@@ -10,7 +10,7 @@ body {
   font-family: helvetica;
 }
 
-/* HEADER STYLES */
+/* HEADER */
 
 #navbar {
   background-color: var(--main-color);
@@ -20,19 +20,19 @@ body {
   width: 100%;
   /*   margin: 0 20px 0 0; */
 }
-header ul {
+#navbar ul {
   margin: 0;
   text-align: right;
   margin-right: 40px;
 }
-header li {
+#navbar li {
   display: inline-block;
   list-style: none;
   /*   line-height: 80px; */
   /*   background-color: blue; */
   /*   padding: 0; */
 }
-header li a {
+#navbar li a {
   text-decoration: none;
   display: relative;
   font-size: 1.7em;
@@ -42,11 +42,15 @@ header li a {
   line-height: 70px;
   /*   background-color: red; */
 }
-header li:hover {
-  background-color: grey;
+#navbar a:hover {
+  /* background-color: grey; */
+  text-decoration: underline;
+  a::before {
+
+  }
 }
 
-/* WELCOME SECTION STYLES */
+/* WELCOME */
 
 #welcome-section {
   position: relative;
@@ -85,7 +89,7 @@ header li:hover {
   color: rgb(0, 102, 255);
 }
 
-/* ABOUT SECTION STYLES */
+/* ABOUT */
 #about-section {
   padding: 140px 20px;
   background: grey;
@@ -95,27 +99,27 @@ header li:hover {
 
 
 
-/* PROJECT SECTION STYLES */
+/* PROJECTS */
 
 #projects {
-  background:
+  /* background:
     radial-gradient(black 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#283864;
-    background-size:16px 16px;
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px; */
+  background-color:#283864;
+  background-size:16px 16px;
 
 /*   height: 1300px; */
   padding: 140px 20px;
 }
 
 #projects-header {
-  border-bottom: solid white;
+  /* border-bottom: solid white; */
 /*   background: red; */
 /*   font-weight: bold; */
   text-align: center;
-  padding: 0 0 10px 0;
+  padding: 0 0 30px 0;
   margin: 0 auto 50px;
   color: white;
   font-size: 3em;
@@ -133,15 +137,8 @@ header li:hover {
   width: 1400px;
     
 }
-.project-tile {
-  background: white;
-  cursor: pointer;
-/*   margin: 10px; */
-/*   position: relative; */
-  background-image: url(/images/screenshot-socrates-500x500.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.project-tile > a {
+  text-decoration: none;
 }
 .project-thumb {
   height: 85%;
@@ -149,28 +146,52 @@ header li:hover {
 .project-banner {
   background-color: var(--main-color);
   height: 15%;
-  position: relative;
+  display: grid;
+  place-items: center;
+  /* position: relative; */
 /*   line-height: 100%; */
 /*   position: absolute; */
 /*   top: 50%; */
 /*   text-align: center; */
 /*   vertical align: center; */
 }
-.project-banner a {
+.project-banner span {
   color: #000;
   font-weight: bold;
   font-size: 1.5em;
-  text-decoration: none;
-  position: absolute;
-/*   background: red; */
-  text-decoration: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* text-decoration: none; */
+  /* text-align: center; */
+  /* height: 100%; */
+  /* position: absolute; */
+  /* background: red; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+#tribute {
+  cursor: pointer;
+  background-image: url(/images/tribute-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#aggregate {
+  cursor: pointer;
+  background-image: url(/images/aggregate-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+}
+#product-landing {
+  cursor: pointer;
+  background-image: url(images/product-landing-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
-
-/* CONTACT SECTION STYLES */
+/* CONTACT */
 
 #contact {
   background:
@@ -214,6 +235,7 @@ header li:hover {
   text-decoration: none;
   text-shadow: 2px 2px 1px #000;
   color: #fff;
+  transition: transform 0.3s ease-out;
 }
 
 #contacts-wrapper a:visited {
@@ -222,6 +244,7 @@ header li:hover {
 
 #contacts-wrapper a:hover {
   color: orange;
+  transform: translateY(8px);
 }
 
 
