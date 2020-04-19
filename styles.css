@@ -190,6 +190,20 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+#survey-form {
+  cursor: pointer;
+  background-image: url(images/survey-form-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+#technical-documentation {
+  cursor: pointer;
+  background-image: url(images/technical-documentation-500x500.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
 
 /* CONTACT */
 
